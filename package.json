@@ -1,0 +1,29 @@
+{
+  "name": "etr-media-productions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "etr-media-productions",
+  "author": "Aaron Cookson",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^2.0.6",
+    "gatsby": "^4.11.1",
+    "gatsby-plugin-image": "^2.11.1",
+    "gatsby-plugin-sharp": "^4.11.1",
+    "gatsby-plugin-styled-components": "^5.11.0",
+    "gatsby-source-filesystem": "^4.11.1",
+    "gatsby-transformer-sharp": "^4.11.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.5"
+  }
+}
