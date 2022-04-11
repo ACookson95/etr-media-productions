@@ -14,20 +14,33 @@ export const Nav = () => {
   `;
   const NavBrand = styled.div`
     display: flex;
-    justify-content: space-between;
     align-items: center;
   `;
 
   const NavLogo = styled.div`
-  
+    padding: ${props => props.theme.spacings.md};
+    width: 90px;
   `;
 
-  const NavTitle = styled.h2`
-  
+  const NavTitle = styled.h1`
+    padding: ${props => props.theme.spacings.lg};
+    width: min-content;
+    white-space: nowrap;
   `;
 
   const NavLinks = styled.div`
-  
+    & a {
+      text-decoration: none;
+      color: ${props => props.theme.colors.light1};
+      padding: ${props => props.theme.spacings.md};
+      font-size: 24px;
+      transition: all .25s ease-in-out;
+    }
+    & a:hover {
+      color: ${props => props.theme.colors.highlight1};
+      border-bottom: solid 3px;
+    }
+
   `;
   return(
     <NavWrapper>
@@ -35,7 +48,7 @@ export const Nav = () => {
         <NavLogo>
           <Logo />
         </NavLogo>
-        <NavTitle>Brand Title</NavTitle>
+        <NavTitle>ETR Media Productions</NavTitle>
       </NavBrand>
       <NavLinks>
         <Link to="/">Home</Link>

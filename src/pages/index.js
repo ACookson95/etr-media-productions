@@ -5,7 +5,7 @@ const indexPage = () => {
   return (
     <>
       <Layout>
-        <p>Portfolio page</p>
+        <p>Home page</p>
       </Layout> 
     </>
   )

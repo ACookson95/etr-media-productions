@@ -10,17 +10,24 @@ export const Footer = () => {
     justify-content: space-between;
     align-items: center;
     padding: ${props => props.theme.spacings.md};
+    margin-top: auto;
   `;
   const FooterText = styled.div`
-
+    padding: ${props => props.theme.spacings.md};
+    color: ${props => props.theme.colors.light2};
   `;
   const SocialLinks = styled.div`
-
+    & a {
+      margin: ${props => props.theme.spacings.md};
+      transition: all .25s ease-in-out;
+    }
+    & a:hover {
+      transform: scale(1.2);
+    }
   `;
 
   const StyledIcon = styled.div`
-    padding: ${props => props.theme.spacings.lg};
-    width: "100%";
+
   `;
 
   return (
@@ -29,9 +36,7 @@ export const Footer = () => {
         @copyright stuff. Other info.
       </FooterText>
       <SocialLinks>
-        <p>{props => props.theme.colors.light1}</p>
         <StyledIcon as={SocialIcon} url="https://linkedin.com/" fgColor="#FFFFFF"/>
-        <StyledIcon as={SocialIcon} url="https://github.com/"  fgColor="#FFFFFF"/>
         <StyledIcon as={SocialIcon} url="https://facebook.com/" fgColor="#FFFFFF"/>
         <StyledIcon as={SocialIcon} url="https://youtube.com/" fgColor="#FFFFFF"/>
         <StyledIcon as={SocialIcon} url="https://instagram.com/" fgColor="#FFFFFF"/>
