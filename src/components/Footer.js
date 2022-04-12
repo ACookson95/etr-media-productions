@@ -33,7 +33,7 @@ export const Footer = () => {
   return (
     <FooterWrapper>
       <FooterText>
-        @copyright stuff. Other info.
+        © 2021 All Rights Owned by Empower the Rebel LLC
       </FooterText>
       <SocialLinks>
         <StyledIcon as={SocialIcon} url="https://linkedin.com/" fgColor="#FFFFFF"/>
