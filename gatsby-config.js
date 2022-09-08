@@ -29,6 +29,6 @@ module.exports = {
         icon: "src/images/etrLogo.png",
         crossOrigin: `use-credentials`,
       },
-    },
+    }
   ],
 };
