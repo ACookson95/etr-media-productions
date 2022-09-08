@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Layout } from "../components";
+import Layout from "../components/Layout";
+import { SEO } from "../components/SEO";
 
 const About = () => {
   return (
@@ -12,3 +13,7 @@ const About = () => {
 }
 
 export default About
+
+export const Head = () => (
+  <SEO />
+)

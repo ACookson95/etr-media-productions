@@ -1,29 +1,18 @@
 import React from "react";
-import { Footer } from "./Footer";
-import { Nav } from "./Nav";
-import styled from "styled-components";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Container } from "react-bootstrap";
 
-export const Layout = ({ children }) => {
-  const PageWrapper = styled.div`
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  `;
-
-  const ContentWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  `;
-
+const Layout = ({ children }) => {
   return (
-    <PageWrapper>
-      <Nav />
-      <ContentWrapper>
-        { children }
-      </ContentWrapper>
+    <Container fluid className="p-0 h-100 d-flex flex-column justify-content-between">
+      <Header />
+      <Container fluid className="p-0 mb-5">
+        {children}
+      </Container>
       <Footer />
-    </PageWrapper>
-  )
-}
+    </Container>
+  );
+};
+
+export default Layout;
