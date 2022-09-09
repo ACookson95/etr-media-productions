@@ -6,7 +6,7 @@ import {
   Stack,
   Alert,
 } from "react-bootstrap";
-import NumberFormat from "react-number-format";
+import { PatternFormat } from "react-number-format";
 import Layout from "../components/Layout";
 import { SEO } from "../components/SEO";
 
@@ -50,7 +50,7 @@ export default function Contact() {
 
   return (
     <Layout>
-      <Container>
+      <Container className="my-5">
         <h1>Contact</h1>
         <div className="my-3">
           Fill out the form with your contact information. Feel free to ask any
@@ -100,7 +100,7 @@ export default function Contact() {
             <Form.Group>
               <Form.Label>Your Phone Number:</Form.Label>
               <Form.Control
-                as={NumberFormat}
+                as={PatternFormat}
                 allowEmptyFormatting
                 format="(###) ###-####"
                 mask="_"

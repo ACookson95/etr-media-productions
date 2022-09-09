@@ -2,7 +2,7 @@ import * as React from "react";
 import { navigate } from "gatsby";
 import Layout from "../components/Layout";
 import { SEO } from "../components/SEO";
-import { Container, Button, Row, Col, Card } from "react-bootstrap";
+import { Container, Button, Row, Col, Card, CardImg } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
@@ -17,7 +17,7 @@ const Hero = styled.div`
     right: 0;
     bottom: 0;
     margin: auto;
-    padding: 20px 15%;
+    padding: 20px 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,6 +32,7 @@ const Hero = styled.div`
     white-space: pre-wrap;
     color: white;
     text-shadow: 1px 1px 3px black;
+    margin-bottom: 20px;
   }
 
   .heroImage {
@@ -51,53 +52,68 @@ const indexPage = () => {
               alt="hero-banner"
             />
             <span>
-              <h1>Show the world your story</h1>
-              <Button type="button" variant="secondary">
+              <h1 className="h1">Show the world your story</h1>
+              <Button type="button" variant="light" size="lg">
                 Get Started
               </Button>
             </span>
           </Hero>
         </Container>
-        <Container className="py-5">
-          <h4>
+        <Container className="py-4 mb-2 border-bottom w-75">
+          <h4 className="text-center">
             We are Empower the Rebel Media Productions. We help individuals and
             companies showcase their work and products.
           </h4>
         </Container>
-        <Container className="mb-4">
-          <Row>
-            <Col>
-              <Card>
-                <Card.Body>
+        <Container className="py-4 mb-2 border-bottom">
+          <Row xs={1} sm={1} md={3} lg={3}>
+            <Col className="my-2">
+              <Card className="h-100">
+                <Card.Body className="d-flex flex-column justify-content-between">
                   <Card.Title>Marketing Strategy</Card.Title>
                   <Card.Text>
                     Product Launches, Social Media, Websites
                   </Card.Text>
-                  <Button type="button" onClick={() => navigate("/services")}>
+                  <Button
+                    type="button"
+                    className="mx-2"
+                    variant="dark"
+                    onClick={() => navigate("/services")}
+                  >
                     See More
                   </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
-              <Card>
-                <Card.Body>
+            <Col className="my-2">
+              <Card className="h-100">
+                <Card.Body className="d-flex flex-column justify-content-between">
                   <Card.Title>Brand Identity</Card.Title>
                   <Card.Text>Logos, Packaging, Brand Colors</Card.Text>
-                  <Button type="button" onClick={() => navigate("/services")}>
+                  <Button
+                    type="button"
+                    className="mx-2"
+                    variant="dark"
+                    onClick={() => navigate("/services")}
+                  >
                     See More
                   </Button>
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
-              <Card>
-                <Card.Body>
+            <Col className="my-2">
+              <Card className="h-100">
+                <Card.Body className="d-flex flex-column justify-content-between">
                   <Card.Title>Digital Media</Card.Title>
                   <Card.Text>
                     Videography, Photography, Social Media Posts
                   </Card.Text>
-                  <Button type="button" onClick={() => navigate("/services")}>
+                  <Button
+                    type="button"
+                    className="mx-2"
+                    variant="dark"
+                    onClick={() => navigate("/services")}
+                  >
                     See More
                   </Button>
                 </Card.Body>
@@ -105,13 +121,26 @@ const indexPage = () => {
             </Col>
           </Row>
         </Container>
-        <Container>
-          <Row>
-            <Col>
-              <h3>Clients</h3>
+        <Container className="mb-5">
+          <Row xs={1} sm={1} md={2}>
+            <Col className="my-2">
+              <h3 className="py-4 mb-2 border-bottom text-center">Clients</h3>
+              <StaticImage src="../images/clients.png" alt="clients-list" />
             </Col>
-            <Col>
-              <h3>Testimonials</h3>
+            <Col className="my-2">
+              <h3 className="py-4 mb-2 border-bottom text-center">
+                Testimonials
+              </h3>
+              <div className="m-3">
+                <p className="quote fw-lighter fst-italic m-1">
+                  "I've worked with ETR on a few different projects. Ben is
+                  awesome! He has a lot of really good insight and vision on
+                  what looks good and will appeal to the right audience. I
+                  definitely recommend anyone looking to grow their company to
+                  get with them!"
+                </p>
+                <p className="text-center">~ Aaron Cookson - Web Design</p>
+              </div>
             </Col>
           </Row>
         </Container>

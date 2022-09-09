@@ -1,4 +1,4 @@
-export default {
+const Theme = {
   fonts: {
     main: "Arial, Helvetica, sans-serif"
   },
@@ -10,7 +10,11 @@ export default {
     highlight1: "#00CFFB",
   },
   breakpoints: {
-
+    sm: "576px",
+    md: "768px",
+    lg: "992px",
+    xl: "1200px",
+    xxl: "1400px",
   },
   spacings: {
     sm: "5px",
@@ -25,3 +29,5 @@ export default {
 
   }
 }
+
+export default Theme

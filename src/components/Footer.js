@@ -1,23 +1,33 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-import { Navbar, Container, Stack } from "react-bootstrap";
+import { Container, Stack, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <Navbar variant='dark' bg='dark' className='py-4'>
-      <Container>
-        <p className="text-muted">
-          © 2021 All Rights Owned by Empower the Rebel LLC. <br/>
-          Created by Aaron Cookson using GatsbyJS.
-        </p>
-        <Stack direction='horizontal' gap={2}>
-          <SocialIcon url="https://linkedin.com/" fgColor="#FFFFFF" />
-          <SocialIcon url="https://facebook.com/" fgColor="#FFFFFF" />
-          <SocialIcon url="https://youtube.com/" fgColor="#FFFFFF" />
-          <SocialIcon url="https://instagram.com/" fgColor="#FFFFFF" />
-        </Stack>
+    <div className="bg-dark">
+      <Container className='py-4'>
+        <Row className="">
+          <Col>
+          </Col>
+          <Col md='auto'>
+            <Stack direction='horizontal' className="d-flex justify-content-evenly">
+              <SocialIcon url="https://www.linkedin.com/in/ben-barlow-38363a175/" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
+              <SocialIcon url="https://www.facebook.com/ben.barlow.967" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
+              <SocialIcon url="https://www.youtube.com/channel/UCIFJFLVbrNsNWy8zEXAp-Xg/featured" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
+              <SocialIcon url="https://instagram.com/etrmediaproductions/" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
+            </Stack>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p className="text-muted fw-light mt-3 mb-0">
+              © 2021 All Rights Owned by Empower the Rebel LLC. <br/>
+              Created by Aaron Cookson using GatsbyJS.
+            </p>
+          </Col>
+        </Row>
       </Container>
-    </Navbar>
+    </div>
   );
 };
 
