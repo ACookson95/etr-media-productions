@@ -13,7 +13,7 @@ const Footer = () => {
             <Stack direction='horizontal' className="d-flex justify-content-evenly">
               <SocialIcon url="https://www.linkedin.com/in/ben-barlow-38363a175/" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
               <SocialIcon url="https://www.facebook.com/ben.barlow.967" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
-              <SocialIcon url="https://www.youtube.com/channel/UCIFJFLVbrNsNWy8zEXAp-Xg/featured" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
+              <SocialIcon url="https://www.youtube.com/channel/UCJLChlBmvC_3GQl-cIWIamw" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
               <SocialIcon url="https://instagram.com/etrmediaproductions/" target="_blank" fgColor="#FFFFFF" className="mx-2"/>
             </Stack>
           </Col>
