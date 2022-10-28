@@ -9,7 +9,7 @@ const Header = () => {
       <Navbar bg="light" expand="md">
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex">
-            <StaticImage src="../images/etrLogo.png" alt="etr-logo" width="60" />
+            <StaticImage src="../images/etrLogo.png" alt="etr-logo" width={60} />
             <span className="p-2">MEDIA PRODUCTIONS</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="headerNav" />
@@ -22,10 +22,13 @@ const Header = () => {
                 Services
               </Nav.Link>
               <Nav.Link as={Link} to="/portfolio">
-                Portfolio
+                Our Work
+              </Nav.Link>
+              <Nav.Link as={Link} to="/about">
+                About ETR
               </Nav.Link>
               <Nav.Link as={Link} to="/contact">
-                Contact
+                Contact Us
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

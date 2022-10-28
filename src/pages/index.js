@@ -5,6 +5,8 @@ import { SEO } from "../components/SEO";
 import { Container, Button, Row, Col, Card, CardImg } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import BgVideo from "../components/BgVideo";
+import heroVid from "../video/etr-hero-vid.mp4"
 
 const Hero = styled.div`
   height: 80vh;
@@ -25,18 +27,12 @@ const Hero = styled.div`
   }
 
   h1 {
-    font-size: 72px;
-    line-height: 86px;
-    font-weight: normal;
+    font-size: clamp(50px, 11vw, 100px);
     text-align: center;
-    white-space: pre-wrap;
     color: white;
     text-shadow: 1px 1px 3px black;
     margin-bottom: 20px;
-  }
-
-  .heroImage {
-    height: 100%;
+    max-width: 1270px;
   }
 `;
 
@@ -46,14 +42,21 @@ const indexPage = () => {
       <Layout>
         <Container fluid className="p-0">
           <Hero>
-            <StaticImage
+            {/* <StaticImage
               className="heroImage"
               src="../images/banner1.png"
               alt="hero-banner"
-            />
+              style={{
+                height: '100%',
+                width: '100%',
+                inset: 0,
+                objectFit: 'cover',
+              }}
+            /> */}
+            <BgVideo src={heroVid}/>
             <span>
               <h1 className="h1">Show the world your story</h1>
-              <Button type="button" variant="light" size="lg">
+              <Button type="button" variant="light" size="lg" onClick={() => navigate("/contact")}>
                 Get Started
               </Button>
             </span>
