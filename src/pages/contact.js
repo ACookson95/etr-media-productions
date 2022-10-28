@@ -112,7 +112,7 @@ export default function Contact() {
             <Form.Group>
               <Form.Label>Message:</Form.Label>
               <Form.Control
-                Required
+                required
                 as="textarea"
                 type="text"
                 name="comments"

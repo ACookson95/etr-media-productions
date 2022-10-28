@@ -3,17 +3,19 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import Theme from "./src/themes/theme";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 const GlobalStyle = createGlobalStyle`
   html, body, #___gatsby, #gatsby-focus-wrapper {
-      height: 100%;
+    height: 100%;
   }
 
   body {
-      margin: 0px;
+    margin: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
   }
 
   div[role="group"][tabindex] {
-      height: 100%;
+    height: 100%;
   }
 `;
 

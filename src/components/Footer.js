@@ -5,7 +5,7 @@ import { Container, Stack, Row, Col } from "react-bootstrap";
 const Footer = () => {
   return (
     <div className="bg-dark">
-      <Container className='py-4'>
+      <Container className='pt-4 '>
         <Row className="">
           <Col>
           </Col>
@@ -20,7 +20,7 @@ const Footer = () => {
         </Row>
         <Row>
           <Col>
-            <p className="text-muted fw-light mt-3 mb-0">
+            <p className="text-muted fw-light mt-3 mb-0 text-center">
               © 2021 All Rights Owned by Empower the Rebel LLC. <br/>
               Created by Aaron Cookson using GatsbyJS.
             </p>
