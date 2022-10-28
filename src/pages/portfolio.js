@@ -2,7 +2,7 @@ import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Layout from "../components/Layout";
 import { SEO } from "../components/SEO";
-import VideoGrid from "../components/videoGrid";
+import VideoGrid from "../components/VideoGrid";
 import YoutubeVideo from "../components/YoutubeVideo";
 import styled from "styled-components";
 
