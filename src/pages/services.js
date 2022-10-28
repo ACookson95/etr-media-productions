@@ -5,48 +5,78 @@ import { Row, Col, Container } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
-const ServiceItem = styled(Row)``;
+const ServiceItem = styled(Row)`
+`;
 
 const ServiceItemCol = styled(Col)`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: ${props => props.bg && props.theme.colors[props.bg] + "95"};
-  color: ${props => props.theme.colors[props.color] && props.theme.colors[props.color]};
+  color: ${props => props.color && props.theme.colors[props.color]};
+  padding: 30px;
 `;
 
-const ServiceItemTitle = styled.h3``;
+const ServiceItemTitle = styled.h4`
 
-const ServiceItemSubtitle = styled.h4``;
+`;
+
+const ServiceItemSubtitle = styled.h5`
+  padding-bottom: ${props => props.theme.spacings.sm};
+  border-bottom: 1px solid ${props => props.color && props.theme.colors[props.color]};
+`;
 
 const ServiceItemText = styled.p``;
 
 const ServiceItemImgWrap = styled(Col)`
-  margin-left: 0;
+  ${props => props.flip ? "margin-right" : "margin-left"}: 0;
   z-index: -1;
-  @media (max-width: ${props => props.theme.breakpoints.sm}) {
-    margin-left: -100%;
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    ${props => props.flip ? "margin-right" : "margin-left"}: -100%;
   }
   padding: 0;
+
+  >div {
+    height: 100%;
+  }
 `;
+
+const Mission = styled(Col)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: ${props => props.theme.spacings.lg};
+  margin: 0 ${props => props.theme.spacings.xl};
+  `;
+
+const MissionTitle = styled.h2`
+  padding: 0 ${props => props.theme.spacings.lg};
+  border-bottom: 1px solid ${props => props.theme.colors.light2}
+`
+
+const MissionStatement = styled.div`
+  font-style: italic;
+  text-align: center;
+`
 
 const Services = () => {
   return (
     <>
       <Layout>
-        <Container className="p-0">
-          <Row className="g-0">
-            <Col className="mx-5 my-3">
-              <h2 className="p-3 border-bottom">Our Mission</h2>
-              <p className="px-3">
-                We are a Media driven company designed to help you and your
+        <Container>
+          <Row>
+            <Mission>
+              <MissionTitle>Our Mission</MissionTitle>
+              <MissionStatement>
+                We are a media driven company designed to help you and your
                 brand reach new heights by giving you the media tools you need
                 to reach your planned goals and company vision.
-              </p>
-            </Col>
+              </MissionStatement>
+            </Mission>
           </Row>
-          <ServiceItem>
-            <ServiceItemCol xs={12} lg={7} bg="light2">
+          <ServiceItem className="g-0">
+            <ServiceItemCol xs={12} md={7} bg="light2">
               <ServiceItemTitle>Marketing Strategy</ServiceItemTitle>
               <ServiceItemSubtitle>
                 Product Launches, Social Media, Websites
@@ -65,8 +95,8 @@ const Services = () => {
               />
             </ServiceItemImgWrap>
           </ServiceItem>
-          <ServiceItem className="flex-row-reverse">
-            <ServiceItemCol xs={12} lg={7}>
+          <ServiceItem className="flex-row-reverse g-0">
+            <ServiceItemCol xs={12} md={7} bg="light1">
               <ServiceItemTitle>Brand Identity</ServiceItemTitle>
               <ServiceItemSubtitle>
                 Logos, Packaging, Brand Colors
@@ -78,15 +108,15 @@ const Services = () => {
                 clearly represented to all of your clients.
               </ServiceItemText>
             </ServiceItemCol>
-            <ServiceItemImgWrap>
+            <ServiceItemImgWrap flip>
               <StaticImage
                 src="../images/branding.jpg"
                 alt="strategy"
               />
             </ServiceItemImgWrap>
           </ServiceItem>
-          <ServiceItem>
-            <ServiceItemCol xs={12} lg={7} bg="dark1" color="light1">
+          <ServiceItem className="g-0">
+            <ServiceItemCol xs={12} md={7} bg="dark1" color="light1">
               <ServiceItemTitle>Digital Media</ServiceItemTitle>
               <ServiceItemSubtitle>
                 Videography, Photography, Social Media Posts
