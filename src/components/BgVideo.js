@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const BgVideo = ({ src }) => {
+const BgVideo = ({ src, data }) => {
 
   const Video = styled.video`
     height: 100%;

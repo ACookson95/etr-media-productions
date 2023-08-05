@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 
 const Thumbnail = styled.div`
@@ -33,19 +32,19 @@ const VideoGrid = ({videos, current, setActive}) => {
   } 
 
   return(
-    <Row className="g-0 m-0 p-0">
+    <div className="g-0 m-0 p-0">
       {videos.map((video, index) => {
         let active = current === index
         let url = `http://img.youtube.com/vi/${video.id}/${video.thumbnailNum}.jpg`
         return(
-          <Col key={index} title={video.title} active={active} xs={4} onClick={() => handleClick(index)}>
+          <div key={index} title={video.title} active={active} xs={4} onClick={() => handleClick(index)}>
             <Thumbnail src={url}>
               <span>{video.title}</span>
             </Thumbnail>
-          </Col>
+          </div>
         )
       })}
-    </Row>
+    </div>
   )
 }
 
