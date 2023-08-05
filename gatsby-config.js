@@ -31,6 +31,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
+    'gatsby-plugin-postcss',
     "gatsby-plugin-styled-components",
     "gatsby-plugin-netlify",
     {

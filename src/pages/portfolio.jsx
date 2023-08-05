@@ -1,11 +1,10 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import { SEO } from "../components/SEO";
-import { graphql } from "graphql";
+import { graphql } from "gatsby";
 
 const Portfolio = ({ data }) => {
-  console.log(data)
-  const { videos } = data.markdownRemark.frontmatter;
+  const { videos } = data?.markdownRemark?.frontmatter;
   return (
     <Layout>
         {videos.map((video) => (
