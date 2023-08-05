@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import { SEO } from "../components/SEO";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -38,7 +38,7 @@ const Hero = styled.div`
 `;
 
 const indexPage = ({ data }) => {
-  const { heading, mainpitch, tiles } =
+  const { heading, summary, tiles } =
     data.markdownRemark.frontmatter;
   return (
     <>
@@ -48,12 +48,12 @@ const indexPage = ({ data }) => {
             <BgVideo src={backgroundVideo} />
             <span>
               <h1>{heading}</h1>
-              <Link to="/About">Learn More</Link>
+              <Link to="/about">Learn More</Link>
             </span>
           </Hero>
         </div>
         <div className="py-4 mb-2 border-bottom w-75">
-          <h4 className="text-center">{mainpitch}</h4>
+          <h4 className="text-center">{summary}</h4>
         </div>
         {tiles.map((tile) => {
           const tileImage = getImage(
@@ -66,39 +66,17 @@ const indexPage = ({ data }) => {
             </Link>
           );
         })}
-        <div className="mb-5">
-          <div>
-            <div className="my-2">
-              <h3 className="py-4 mb-2 border-bottom text-center">Clients</h3>
-            </div>
-            <div className="my-2">
-              <h3 className="py-4 mb-2 border-bottom text-center">
-                Testimonials
-              </h3>
-              <div className="m-3">
-                <p className="quote fw-lighter fst-italic m-1">
-                  "I've worked with ETR on a few different projects. Ben is
-                  awesome! He has a lot of really good insight and vision on
-                  what looks good and will appeal to the right audience. I
-                  definitely recommend anyone looking to gdiv their company to
-                  get with them!"
-                </p>
-                <p className="text-center">~ Aaron Cookson - Web Design</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </Layout>
     </>
   );
 };
 
 export const query = graphql`
-  query MyQuery {
-    markdownRemark(frontmatter: { path: { eq: "/index" } }) {
+  query PageQuery {
+    markdownRemark(frontmatter: { path: { eq: "/" } }) {
       frontmatter {
         heading
-        mainpitch
+        summary
         tiles {
           image {
             childImageSharp {
