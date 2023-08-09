@@ -4,7 +4,7 @@ import { ETRLogo } from "./ETRLogo";
 
 const Header = () => {
   return (
-    <div className="bg-zinc-100">
+    <div className="bg-zinc-50">
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/">
           <ETRLogo />
