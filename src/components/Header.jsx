@@ -20,7 +20,7 @@ const Header = () => {
 };
 
 const NavItem = ({ path, label }) => {
-  const isCurrent = window.location.pathname.includes(path)
+  const isCurrent = window?.location.pathname.includes(path)
   return (
     <Link to={path} className={`p-1 text-lg text-zinc-800 ${isCurrent ? "border-b-2" : ""} hover:text-zinc-400`}>
       {label}
