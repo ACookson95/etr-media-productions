@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { ETRLogo } from "./ETRLogo";
 
@@ -20,7 +20,12 @@ const Header = () => {
 };
 
 const NavItem = ({ path, label }) => {
-  const isCurrent = window?.location.pathname.includes(path)
+  const [isCurrent, setIsCurrent] = useState(false)
+
+  useEffect(() => {
+    setIsCurrent(window.location.pathname.includes(path))
+  }, [path])
+
   return (
     <Link to={path} className={`p-1 text-lg text-zinc-800 ${isCurrent ? "border-b-2" : ""} hover:text-zinc-400`}>
       {label}
