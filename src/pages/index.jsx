@@ -64,7 +64,7 @@ const indexPage = ({ data }) => {
           })}
         </div>
         <div className="bg-zinc-100">
-          <div className="container mx-auto flex flex-col items-center h-[60vh] p-8 pt-36 gap-12">
+          <div className="container mx-auto flex flex-col items-center p-8 py-32 gap-12">
             <h1 className="text-2xl text-center">{summary}</h1>
             <TestimonyWidget testimonials={testimonials} />
           </div>
@@ -80,6 +80,7 @@ const indexPage = ({ data }) => {
                 <a
                   href={client.link}
                   target="_blank"
+                  rel="noreferrer"
                   className="h-20 w-20 mx-auto flex justify-centerm items-center"
                 >
                   <GatsbyImage

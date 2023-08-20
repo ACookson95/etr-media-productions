@@ -12,7 +12,7 @@ function encode(data) {
 
 const Contact = ({ data }) => {
   const { title, summary, image } = data.markdownRemark.frontmatter;
-  const  contactImage = getImage(image?.childImageSharp?.gatsbyImageData);
+  const contactImage = getImage(image?.childImageSharp?.gatsbyImageData);
 
   const initialState = {
     name: "",
@@ -47,85 +47,113 @@ const Contact = ({ data }) => {
 
   return (
     <Layout>
-      <div className="wrap container mx-auto py-8">
-        <div className="grid grid-cols-10">
-          <div className="row-span-full col-start-1 col-span-6 self-center">
-            <GatsbyImage className="object-cover rounded-lg" image={contactImage} alt="Contact Us Image" />
-          </div>
-          <form
-            name="contact"
-            method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-            className="flex flex-col row-span-full col-span-6 col-end-11 self-center bg-zinc-100/95 rounded-lg p-8 drop-shadow-lg gap-4"
-          >
-            <h1 className="text-xl">{title}</h1>
-            <p className="text-sm">{summary}</p>
-            <input type="hidden" name="form-name" value="contact" />
-            <p hidden>
-              <label>
-                Don’t fill this out:{" "}
-                <input name="bot-field" onChange={handleChange} />
-              </label>
-            </p>
-            <div>
-              <div className="mb-4">
-                <label className="block text-zinc-700 text-sm font-bold mb-2">Name:</label>
-                <input
-                  required
-                  type="text"
-                  name="name"
-                  value={state.name}
-                  onChange={handleChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-zinc-700 text-sm font-bold mb-2">Email:</label>
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  value={state.email}
-                  onChange={handleChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-zinc-700 text-sm font-bold mb-2">Phone Number (optional):</label>
-                <input
-                  type="tel"
-                  name="number"
-                  value={state.number}
-                  onChange={handleChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-zinc-700 text-sm font-bold mb-2">Message:</label>
-                <textarea
-                  required
-                  name="comments"
-                  value={state.comments}
-                  onChange={handleChange}
-                  className="shadow appearance-none border rounded w-full h-24 py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <button className="py-3 px-5 text-zinc-50 bg-sky-700 rounded hover:bg-sky-800" type="submit">Submit</button>
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-4">
+          <div className="flex flex-col gap-4">
+            <div className="bg-zinc-100 rounded-lg p-10">
+              <div className="text-2xl">{title}</div>
+              <div className="mt-2">{summary}</div>
             </div>
-          </form>
+            <GatsbyImage
+              className="object-cover rounded-lg w-full hidden sm:block"
+              image={contactImage}
+              alt="Contact Us Image"
+            />
+          </div>
+          {submitted ? (
+            <div className="bg-zinc-100 rounded-lg p-8 drop-shadow-lg gap-8 h-full flex flex-col">
+              <div className="bg-green-500/50 rounded-lg p-4">✔ Successfully Submitted</div>
+              <div className="text-lg p-4 self-center">
+                Thanks for reaching out! We'll be in touch as soon as we're able.
+              </div>
+            </div>
+          ) : (
+            <form
+              name="contact"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="flex flex-col self-center bg-zinc-100 rounded-lg p-8 drop-shadow-lg gap-4 h-full"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input name="bot-field" onChange={handleChange} />
+                </label>
+              </p>
+              <div>
+                <div className="mb-4">
+                  <label className="block text-zinc-700 text-sm font-bold mb-2">
+                    Name:
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    name="name"
+                    value={state.name}
+                    onChange={handleChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-zinc-700 text-sm font-bold mb-2">
+                    Email:
+                  </label>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    value={state.email}
+                    onChange={handleChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-zinc-700 text-sm font-bold mb-2">
+                    Phone Number (optional):
+                  </label>
+                  <input
+                    type="tel"
+                    name="number"
+                    value={state.number}
+                    onChange={handleChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-zinc-700 text-sm font-bold mb-2">
+                    Message:
+                  </label>
+                  <textarea
+                    required
+                    name="comments"
+                    value={state.comments}
+                    onChange={handleChange}
+                    className="shadow appearance-none border rounded w-full h-24 py-2 px-3 text-zinc-700 leading-tight focus:outline-none focus:shadow-outline"
+                  />
+                </div>
+                <button
+                  className="py-3 px-5 text-zinc-50 bg-sky-700 rounded hover:bg-sky-800"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          )}
         </div>
       </div>
     </Layout>
   );
-}
+};
 
 export default Contact;
 
 export const query = graphql`
   query PageQuery {
-    markdownRemark(frontmatter: {path: {eq: "/contact"}}) {
+    markdownRemark(frontmatter: { path: { eq: "/contact" } }) {
       frontmatter {
         title
         summary
@@ -137,6 +165,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 export const Head = () => <SEO />;

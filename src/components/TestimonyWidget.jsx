@@ -5,6 +5,7 @@ const TestimonyWidget = ({ testimonials }) => {
   const [showTestimonial, setShowTestimonial] = useState(true);
 
   useEffect(() => {
+    if (testimonials.length <= 1) return;
     const timer = setInterval(() => {
       setShowTestimonial(false); // Start fading out
       setTimeout(() => {
