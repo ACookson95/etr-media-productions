@@ -17,6 +17,6 @@ blurbs:
     image: ../images/media.jpeg
 about: 
   - title: More About 3TR
-    text: 3RT Media was built around the idea that each step that we take and each decision we make truly reveals who we are and what we believe. It is when our actions prove our beliefs that our client base or ‘audience’ is willing to buy our products and services because their beliefs are similar to ours. Our mission is to help you as a company connect with your clients on a more personal level, and then show them what you have to offer. We bring your products and services to life, highlighting your customer’s lifestyle through customized videos created specifically for you and your company.
+    text: 3RT Media was built around the belief that each stride we take and every choice we make reflects our identity and values. It is when we share the stories that shaped who we are today, that we have the opportunity to truly impact our audience’s life. Our mission is to enable your company to forge deeper connections with your clients, crafting a more personal relationship with those you wish to serve. Let 3TR Media help you, by bringing your products and services to life through tailor-made videos, meticulously crafted for you and your brand.
     image: ../images/about-banner.png
 ---

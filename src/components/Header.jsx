@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
-import { ETRLogo } from "./ETRLogo";
+import { ETRLogoInline } from "./ETRLogo";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,8 +34,8 @@ const Header = () => {
   return (
     <div className="bg-zinc-50 relative" onClick={handleMobileMenuClick}>
       <div className="container mx-auto flex items-center justify-between">
-        <Link to="/">
-          <ETRLogo />
+        <Link to="/" className="p-5">
+          <ETRLogoInline height="30px" />
         </Link>
         <div className="gap-5 mx-5 hidden sm:flex">
           <NavItem path="/" label="Home" />
@@ -43,7 +43,7 @@ const Header = () => {
           <NavItem path="/portfolio" label="Our Work" />
           <NavItem path="/contact" label="Contact Us" />
         </div>
-        <div className="sm:hidden p-4">
+        <div className="sm:hidden">
           <button
             className="text-zinc-700 w-20 h-20 relative focus:outline-none"
             onClick={toggleMobileMenu}
