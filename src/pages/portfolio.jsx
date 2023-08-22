@@ -46,7 +46,7 @@ const Portfolio = ({ data }) => {
         open={videoOpen}
         onClose={handleVideoClose}
       />
-      <div className="grid grid-cols-2 sm:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {videos.map((video, index) => (
           <VideoTile
             key={video.title}

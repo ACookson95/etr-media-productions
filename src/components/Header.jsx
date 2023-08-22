@@ -38,6 +38,7 @@ const Header = () => {
           <ETRLogo />
         </Link>
         <div className="gap-5 mx-5 hidden sm:flex">
+          <NavItem path="/" label="Home" />
           <NavItem path="/about" label="What We Do" />
           <NavItem path="/portfolio" label="Our Work" />
           <NavItem path="/contact" label="Contact Us" />
@@ -70,6 +71,7 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="absolute top-[calc(100%-1rem)] left-0 z-10 bg-zinc-50 w-screen">
           <div className="flex flex-col gap-2 p-4 w-max ">
+            <NavItem path="/" label="Home" />
             <NavItem path="/about" label="What We Do" />
             <NavItem path="/portfolio" label="Our Work" />
             <NavItem path="/contact" label="Contact Us" />
@@ -84,7 +86,7 @@ const NavItem = ({ path, label }) => {
   const [isCurrent, setIsCurrent] = useState(false);
 
   useEffect(() => {
-    setIsCurrent(window.location.pathname.includes(path));
+    setIsCurrent(window.location.pathname === path+"/" || window.location.pathname === path);
   }, [path]);
 
   return (

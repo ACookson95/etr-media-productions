@@ -63,7 +63,7 @@ const indexPage = ({ data }) => {
             <TestimonyWidget testimonials={testimonials} />
           </div>
         </div>
-        <div className="p-20">
+        <div className="p-16">
           <div className="text-xl text-center mb-4">{clientLabel}</div>
           <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
             {clients.map((client) => {
@@ -76,7 +76,7 @@ const indexPage = ({ data }) => {
                     href={client.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="h-20 w-20 mx-auto flex justify-centerm items-center"
+                    className="h-20 w-20 m-4 mx-auto flex justify-centerm items-center"
                   >
                     <GatsbyImage
                       key={client.name}
@@ -87,7 +87,7 @@ const indexPage = ({ data }) => {
                 );
               } else {
                 return (
-                  <div className="h-20 w-20 mx-auto flex justify-centerm items-center">
+                  <div className="h-20 w-20 m-4 mx-auto flex justify-centerm items-center">
                     <GatsbyImage
                       key={client.name}
                       alt={client.name}
