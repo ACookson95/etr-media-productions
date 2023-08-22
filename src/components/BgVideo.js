@@ -12,7 +12,7 @@ const BgVideo = ({ src, data }) => {
 
   return (
     <>
-      <Video autoPlay loop muted>
+      <Video autoPlay playsInline loop muted>
         <source src={src} type="video/mp4" />
       </Video>
     </>

@@ -10,7 +10,7 @@ const About = ({ data }) => {
   return (
     <Layout>
       <div className="bg-zinc-200">
-        <div className="container mx-auto flex flex-col items-center h-[50vh] p-8 pt-36 gap-12">
+        <div className="container mx-auto flex flex-col items-center p-8 py-36 gap-12">
           <div className="text-3xl text-center text-zinc-700">{heading}</div>
           <div className="text-xl text-center max-w-5xl text-zinc-700">
             {summary}
