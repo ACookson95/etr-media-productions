@@ -76,7 +76,7 @@ const indexPage = ({ data }) => {
                     href={client.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="h-20 w-20 m-4 mx-auto flex justify-centerm items-center"
+                    className="h-25 w-25 m-4 mx-auto flex justify-centerm items-center"
                   >
                     <GatsbyImage
                       key={client.name}
@@ -87,7 +87,7 @@ const indexPage = ({ data }) => {
                 );
               } else {
                 return (
-                  <div className="h-20 w-20 m-4 mx-auto flex justify-centerm items-center">
+                  <div className="h-25 w-25 m-4 mx-auto flex justify-centerm items-center">
                     <GatsbyImage
                       key={client.name}
                       alt={client.name}
