@@ -61,7 +61,7 @@ const Contact = ({ data }) => {
             />
           </div>
           {submitted ? (
-            <div className="bg-zinc-100 rounded-lg p-8 drop-shadow-lg gap-8 h-full flex flex-col">
+            <div className="bg-zinc-100 rounded-lg p-8 gap-8 h-full flex flex-col">
               <div className="bg-green-500/50 rounded-lg p-4">✔ Successfully Submitted</div>
               <div className="text-lg p-4 self-center">
                 Thanks for reaching out! We'll be in touch as soon as we're able.
@@ -74,21 +74,22 @@ const Contact = ({ data }) => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
-              className="flex flex-col self-center bg-zinc-100 rounded-lg p-8 drop-shadow-lg gap-4 h-full"
+              className="flex flex-col self-center bg-zinc-100 rounded-lg p-8 gap-4 h-full"
             >
               <input type="hidden" name="form-name" value="contact" />
               <p hidden>
-                <label>
+                <label htmlFor="bot-field">
                   Don’t fill this out:{" "}
-                  <input name="bot-field" onChange={handleChange} />
+                  <input id="bot-field" name="bot-field" onChange={handleChange} />
                 </label>
               </p>
               <div>
                 <div className="mb-4">
-                  <label className="block text-zinc-700 text-sm font-bold mb-2">
+                  <label htmlFor="name" className="block text-zinc-700 text-sm font-bold mb-2">
                     Name:
                   </label>
                   <input
+                    id="name"
                     required
                     type="text"
                     name="name"
@@ -98,10 +99,11 @@ const Contact = ({ data }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label className="block text-zinc-700 text-sm font-bold mb-2">
+                  <label htmlFor="email" className="block text-zinc-700 text-sm font-bold mb-2">
                     Email:
                   </label>
                   <input
+                    id="email"
                     required
                     type="email"
                     name="email"
@@ -111,10 +113,11 @@ const Contact = ({ data }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label className="block text-zinc-700 text-sm font-bold mb-2">
+                  <label htmlFor="number" className="block text-zinc-700 text-sm font-bold mb-2">
                     Phone Number (optional):
                   </label>
                   <input
+                    id="number"
                     type="tel"
                     name="number"
                     value={state.number}
@@ -123,10 +126,11 @@ const Contact = ({ data }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label className="block text-zinc-700 text-sm font-bold mb-2">
+                  <label htmlFor="comments" className="block text-zinc-700 text-sm font-bold mb-2">
                     Message:
                   </label>
                   <textarea
+                    id="comments"
                     required
                     name="comments"
                     value={state.comments}

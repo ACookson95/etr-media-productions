@@ -4,23 +4,19 @@ import { SEO } from "../components/SEO";
 import { graphql } from "gatsby";
 import { useState } from "react";
 import VideoModal from "../components/VideoModal";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const VideoTile = ({ video, handleTileClick, index }) => {
-  const parseYoutubeId = (url) => {
-    const regExp =
-      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-    const match = url.match(regExp);
-    return match && match[7].length === 11 ? match[7] : false;
-  };
-  const youtubeId = parseYoutubeId(video.videoUrl);
-  const thumbnailUrl = `https://img.youtube.com/vi/${youtubeId}/0.jpg`;
+const VideoTile = ({ video, handleTileClick, index, thumbnail }) => {
+  const thumbnailImage = getImage(
+    thumbnail?.childImageSharp?.gatsbyImageData
+  );
   return (
     <div className="overflow-hidden">
       <div
         className="aspect-video bg-zinc-500 cursor-pointer relative overflow-hidden flex items-center transform ease-in-out transition duration-500 hover:scale-110"
         onClick={() => handleTileClick(index)}
       >
-        <img className="w-full" src={thumbnailUrl} alt={video.title} />
+        <GatsbyImage className="h-full w-full bg-cover" image={thumbnailImage} alt={video.title} />
         <div className="absolute opacity-0 hover:opacity-100 bg-zinc-700/20 top-0 left-0 w-full h-full p-4 flex justify-center items-center text-center text-xl text-zinc-50 transform ease-in-out transition duration-500">
           {video.title}
         </div>
@@ -57,6 +53,7 @@ const Portfolio = ({ data }) => {
             index={index}
             video={video}
             handleTileClick={handleTileClick}
+            thumbnail={video.thumbnail}
           />
         ))}
       </div>
@@ -71,6 +68,11 @@ export const query = graphql`
         videos {
           title
           videoUrl
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(width: 800)
+            }
+          }
         }
       }
     }

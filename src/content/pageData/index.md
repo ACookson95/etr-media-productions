@@ -39,6 +39,27 @@ clients:
   - name: Uptown Drapes
     link: https://uptowndrapes.com/
     logo: ../images/uptown-drapes-logo.webp
+  - name: The Forge
+    link: ""
+    logo: ../images/Forge_Logo.png
+  - name: Brady's Bath & Brush
+    link: ""
+    logo: ../images/Bradys_Logo.png
+  - name: Infinite Real Estate
+    link: https://www.infiniterealestategroup.com/
+    logo: ../images/Infinite_Real_Estate_Logo.png
+  - name: James Burt Art
+    link: https://www.jamesburtart.com/
+    logo: ../images/James_Burt_Logo.png
+  - name: On Site
+    link: ""
+    logo: ../images/On_Sight_Logo.png
+  - name: R&R Construction
+    link: https://www.instagram.com/rnr_construction_ut/
+    logo: ../images/RR_Construction_Logo.png
+  - name: Oscar Photographii
+    link: https://www.instagram.com/oscars_photographii/
+    logo: ../images/Oscar_Photographii_Logo.png
 testimonials:
   - body: "\"I've worked with 3TR on a few different projects. Ben is awesome! He has a lot of really good insight and vision on what looks good and will appeal to the right audience. I definitely recommend anyone looking to grow their company to get with them!\""
     name: Aaron Cookson

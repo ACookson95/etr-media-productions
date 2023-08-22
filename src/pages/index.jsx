@@ -26,14 +26,8 @@ const Hero = (props) => (
 );
 
 const indexPage = ({ data }) => {
-  const {
-    heading,
-    summary,
-    tiles,
-    clients,
-    clientLabel,
-    testimonials,
-  } = data.markdownRemark.frontmatter;
+  const { heading, summary, tiles, clients, clientLabel, testimonials } =
+    data.markdownRemark.frontmatter;
   return (
     <>
       <Layout>
@@ -76,20 +70,32 @@ const indexPage = ({ data }) => {
               const clientImage = getImage(
                 client.logo?.childImageSharp?.gatsbyImageData
               );
-              return (
-                <a
-                  href={client.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="h-20 w-20 mx-auto flex justify-centerm items-center"
-                >
-                  <GatsbyImage
-                    key={client.name}
-                    alt={client.name}
-                    image={clientImage}
-                  />
-                </a>
-              );
+              if (client.link) {
+                return (
+                  <a
+                    href={client.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="h-20 w-20 mx-auto flex justify-centerm items-center"
+                  >
+                    <GatsbyImage
+                      key={client.name}
+                      alt={client.name}
+                      image={clientImage}
+                    />
+                  </a>
+                );
+              } else {
+                return (
+                  <div className="h-20 w-20 mx-auto flex justify-centerm items-center">
+                    <GatsbyImage
+                      key={client.name}
+                      alt={client.name}
+                      image={clientImage}
+                    />
+                  </div>
+                );
+              }
             })}
           </div>
         </div>

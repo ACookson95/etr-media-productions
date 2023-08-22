@@ -11,18 +11,21 @@ const Footer = () => {
             <SocialIcon
               url="https://www.linkedin.com/in/ben-barlow-38363a175/"
               target="_blank"
+              rel="noreferrer"
               fgColor="#FFFFFF"
               className="mx-2"
             />
             <SocialIcon
               url="https://www.youtube.com/channel/UCJLChlBmvC_3GQl-cIWIamw"
               target="_blank"
+              rel="noreferrer"
               fgColor="#FFFFFF"
               className="mx-2"
             />
             <SocialIcon
-              url="https://instagram.com/etrmediaproductions/"
+              url="https://www.instagram.com/3trmedia/"
               target="_blank"
+              rel="noreferrer"
               fgColor="#FFFFFF"
               className="mx-2"
             />
