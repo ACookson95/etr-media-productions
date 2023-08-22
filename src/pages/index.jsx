@@ -32,7 +32,7 @@ const indexPage = ({ data }) => {
     <>
       <Layout>
         <Hero heading={heading} />
-        <div className="flex items-center w-screen">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           {tiles.map((tile, index) => {
             const tileImage = getImage(
               tile.image?.childImageSharp?.gatsbyImageData
@@ -47,7 +47,7 @@ const indexPage = ({ data }) => {
                   <GatsbyImage
                     image={tileImage}
                     alt={tile.title}
-                    className="min-h-[400px]"
+                    className="min-h-[150px] md:min-h-[400px] max-h-[200px] md:max-h-[400px]"
                   />
                   <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-center text-zinc-100 text-3xl hover:bg-zinc-500/50">
                     {tile.title}
