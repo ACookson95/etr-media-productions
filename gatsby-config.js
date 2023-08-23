@@ -10,21 +10,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pageData`,
-        path: `${__dirname}/src/content/pageData`,
+        path: `${__dirname}/static/content/pageData`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/content/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `video`,
-        path: `${__dirname}/src/content/video`,
+        path: `${__dirname}/static/video`,
       },
     },
     `gatsby-plugin-sharp`,
@@ -43,9 +43,10 @@ module.exports = {
         background_color: "#ffffff",
         theme_color: "#ffffff",
         display: "standalone",
-        icon: "src/content/images/etrLogo.png",
+        icon: "static/images/etrLogo.png",
         crossOrigin: `use-credentials`,
       },
-    }
+    },
+    `gatsby-plugin-netlify-cms`
   ],
 };

@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import { SEO } from "../components/SEO";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BgVideo from "../components/BgVideo";
-import backgroundVideo from "../content/video/etr-hero-vid.mp4";
+import backgroundVideo from "../../static/video/etr-hero-vid.mp4";
 import { graphql } from "gatsby";
 import TestimonyWidget from "../components/TestimonyWidget";
 
