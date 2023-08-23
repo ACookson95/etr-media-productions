@@ -1,56 +1,56 @@
 ---
 path: /
 heading: Show the world your story
-backgroundVideo: ../video/etr-hero-vid.mp4
+backgroundVideo: ../../video/etr-hero-vid.mp4
 tiles:
   - title: About ETR
     path: /about
-    image: ../images/filming.jpg
+    image: ../../images/filming.jpg
   - title: See Our Work
     path: /portfolio
-    image: ../images/lense.jpg
+    image: ../../images/lense.jpg
   - title: Get in Touch
     path: /contact
-    image: ../images/contact.jpg
+    image: ../../images/contact.jpg
 summary: At 3TR Media, we help individuals and companies showcase their work and products.
 clientLabel: Trusted By
 clients:
   - name: Lizard Skins
     link: https://www.lizardskins.com/
-    logo: ../images/lizardskins.png
+    logo: ../../images/lizardskins.png
   - name: Berserker
-    logo: ../images/berserkerlogo.png
+    logo: ../../images/berserkerlogo.png
     link: https://www.instagram.com/getberserker/?hl=en
-  - logo: ../images/stackrealestate.png
+  - logo: ../../images/stackrealestate.png
     name: Stack Real Estate
     link: http://stackwithus.com/
   - name: Abraxia Real Estate
     link: https://www.abraxiarealestate.com/
-    logo: ../images/abraxia.png
+    logo: ../../images/abraxia.png
   - name: Chhlat Health
     link: https://www.chhlathealth.com/
-    logo: ../images/chhlathealth.png
+    logo: ../../images/chhlathealth.png
   - name: RH Borden
     link: http://www.rhborden.com/
-    logo: ../images/rhborden.png
+    logo: ../../images/rhborden.png
   - name: Uptown Drapes
     link: https://uptowndrapes.com/
-    logo: ../images/uptown-drapes-logo.webp
+    logo: ../../images/uptown-drapes-logo.webp
   - name: Infinite Real Estate
     link: https://www.infiniterealestategroup.com/
-    logo: ../images/Infinite_Real_Estate_Logo.png
+    logo: ../../images/Infinite_Real_Estate_Logo.png
   - name: James Burt Art
     link: https://www.jamesburtart.com/
-    logo: ../images/James_Burt_Logo.png
+    logo: ../../images/James_Burt_Logo.png
   - name: On Site
     link: ""
-    logo: ../images/On_Sight_Logo.png
+    logo: ../../images/On_Sight_Logo.png
   - name: R&R Construction
     link: https://www.instagram.com/rnr_construction_ut/
-    logo: ../images/RR_Construction_Logo.png
+    logo: ../../images/RR_Construction_Logo.png
   - name: Oscar Photographii
     link: https://www.instagram.com/oscars_photographii/
-    logo: ../images/Oscar_Photographii_Logo.png
+    logo: ../../images/Oscar_Photographii_Logo.png
 testimonials:
   - body: "\"We worked with 3TR Media on a video project for our company.  Ben was great to work with.  He was very professional and quick to respond.  The quality of our video turned out great.  We would absolutely recommend him to anyone looking for a video project.\""
     name: Ryan Huntington
