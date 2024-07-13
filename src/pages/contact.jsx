@@ -3,6 +3,8 @@ import Layout from "../components/Layout";
 import { SEO } from "../components/SEO";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { PopupWidget  } from "react-calendly";
+
 
 function encode(data) {
   return Object.keys(data)
@@ -62,9 +64,12 @@ const Contact = ({ data }) => {
           </div>
           {submitted ? (
             <div className="bg-zinc-100 rounded-lg p-8 gap-8 h-full flex flex-col">
-              <div className="bg-green-500/50 rounded-lg p-4">✔ Successfully Submitted</div>
+              <div className="bg-green-500/50 rounded-lg p-4">
+                ✔ Successfully Submitted
+              </div>
               <div className="text-lg p-4 self-center">
-                Thanks for reaching out! We'll be in touch as soon as we're able.
+                Thanks for reaching out! We'll be in touch as soon as we're
+                able.
               </div>
             </div>
           ) : (
@@ -80,12 +85,19 @@ const Contact = ({ data }) => {
               <p hidden>
                 <label htmlFor="bot-field">
                   Don’t fill this out:{" "}
-                  <input id="bot-field" name="bot-field" onChange={handleChange} />
+                  <input
+                    id="bot-field"
+                    name="bot-field"
+                    onChange={handleChange}
+                  />
                 </label>
               </p>
               <div>
                 <div className="mb-4">
-                  <label htmlFor="name" className="block text-zinc-700 text-sm font-bold mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-zinc-700 text-sm font-bold mb-2"
+                  >
                     Name:
                   </label>
                   <input
@@ -99,7 +111,10 @@ const Contact = ({ data }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="email" className="block text-zinc-700 text-sm font-bold mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-zinc-700 text-sm font-bold mb-2"
+                  >
                     Email:
                   </label>
                   <input
@@ -113,7 +128,10 @@ const Contact = ({ data }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="number" className="block text-zinc-700 text-sm font-bold mb-2">
+                  <label
+                    htmlFor="number"
+                    className="block text-zinc-700 text-sm font-bold mb-2"
+                  >
                     Phone Number (optional):
                   </label>
                   <input
@@ -126,7 +144,10 @@ const Contact = ({ data }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="comments" className="block text-zinc-700 text-sm font-bold mb-2">
+                  <label
+                    htmlFor="comments"
+                    className="block text-zinc-700 text-sm font-bold mb-2"
+                  >
                     Message:
                   </label>
                   <textarea
@@ -147,6 +168,12 @@ const Contact = ({ data }) => {
               </div>
             </form>
           )}
+        </div>
+        <div>
+          <PopupWidget
+            url="https://calendly.com/3trmedia/30min"
+            rootElement={document.getElementById("___gatsby")}
+          />
         </div>
       </div>
     </Layout>
