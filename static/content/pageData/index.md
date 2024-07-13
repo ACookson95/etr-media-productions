@@ -3,7 +3,7 @@ path: /
 heading: Show the world your story
 backgroundVideo: ../../video/etr-hero-vid.mp4
 tiles:
-  - title: About ETR
+  - title: About 3TR
     path: /about
     image: ../../images/filming.jpg
   - title: See Our Work
