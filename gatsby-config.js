@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `ETR Media Productions`,
-    description: `We are ETR Media. We cunsult and create various media for businesses and individuals.`,
-    siteUrl: `https://www.etrmediaproductions.com`,
+    title: `3TR Media`,
+    description: `We are 3TR Media. We cunsult and create various media for businesses and individuals.`,
+    siteUrl: `https://3trmedia.com`,
     image: `src/content/images/etrLogo.png`
   },
   plugins: [
@@ -37,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "ETR Media Productions",
-        short_name: "ETR",
+        name: "3TR Media",
+        short_name: "3TR",
         start_url: "/",
         background_color: "#ffffff",
         theme_color: "#ffffff",
@@ -47,6 +47,24 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-GHN2EKJX00", // Google Analytics / GA
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
+      },
+    },
   ],
 };
