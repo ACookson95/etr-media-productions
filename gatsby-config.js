@@ -47,7 +47,6 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
