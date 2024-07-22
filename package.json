@@ -8,9 +8,9 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
+    "develop": "tinacms dev -c \"gatsby develop\"",
+    "start": "tinacms dev -c \"gatsby develop\"",
+    "build": "tinacms build && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },

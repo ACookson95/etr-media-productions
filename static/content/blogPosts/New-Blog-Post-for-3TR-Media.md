@@ -16,7 +16,7 @@ In today's digital age, video marketing has become an essential tool for busines
 
 ### Our Approach to Video Production
 
-At \[Your Friend's Company Name], we follow a comprehensive process to ensure that every piece of content we produce aligns with your brand’s goals and resonates with your audience.
+At 3TR Media, we follow a comprehensive process to ensure that every piece of content we produce aligns with your brand’s goals and resonates with your audience.
 
 1. Discovery Phase: We start by understanding your business, target audience, and marketing objectives. This helps us craft a tailored video strategy that meets your specific needs.
 2. Creative Development: Our team of creative professionals brainstorms ideas and develops a compelling storyline. We script, storyboard, and plan every detail to ensure the final product delivers your message effectively.
