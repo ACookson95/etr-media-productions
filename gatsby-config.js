@@ -6,6 +6,14 @@ module.exports = {
     image: `src/content/images/etrLogo.png`
   },
   plugins: [
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogPosts`,
+        path: `${__dirname}/static/content/blogPosts`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
