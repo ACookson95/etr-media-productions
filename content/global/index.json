@@ -1,10 +1,6 @@
 {
   "header": {
-    "icon": {
-      "name": "Tina",
-      "color": "orange",
-      "style": "float"
-    },
+    "logo": "/uploads/etrLogo.png",
     "name": "3TR Media",
     "color": "default",
     "nav": [

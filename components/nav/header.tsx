@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Container } from "../layout/container";
 import { cn } from "../../lib/utils";
 import { tinaField } from "tinacms/dist/react";
-import { Icon } from "../icon";
 import NavItems from "./nav-items";
 import { useLayout } from "../layout/layout-context";
+import Image from "next/image";
 
 const headerColor = {
   default:
@@ -28,6 +28,8 @@ export default function Header() {
   const { globalSettings, theme } = useLayout();
   const header = globalSettings.header;
 
+  console.log("header", header)
+
   const headerColorCss =
     header.color === "primary"
       ? headerColor.primary[theme.color]
@@ -44,15 +46,21 @@ export default function Header() {
               href="/"
               className="flex gap-1 items-center whitespace-nowrap tracking-[.002em]"
             >
-              <Icon
-                tinaField={tinaField(header, "icon")}
-                parentColor={header.color}
-                data={{
-                  name: header.icon.name,
-                  color: header.icon.color,
-                  style: header.icon.style,
-                }}
-              />{" "}
+              {header.logo && (
+                <div
+                  data-tina-field={tinaField(header, "logo")}
+                  className="relative flex-shrink-0 md:w-2/5 flex justify-center"
+                >
+                  <Image
+                    className="w-full h-auto max-w-full rounded-lg"
+                    style={{ objectFit: "cover" }}
+                    alt={"logo"}
+                    src={header.logo}
+                    width={70}
+                    height={70}
+                  />
+                </div>
+              )}
               <span data-tina-field={tinaField(header, "name")}>
                 {header.name}
               </span>
