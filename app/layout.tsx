@@ -23,8 +23,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Tina",
-  description: "Tina Cloud Starter",
+  title: "3TR Media",
+  description: "Helping individuals and companies showcase their work and products. We custom tailor every experience to you and your team, ensuring that the media we create aligns with your unique business goals and target market.",
 };
 
 export default async function RootLayout({
